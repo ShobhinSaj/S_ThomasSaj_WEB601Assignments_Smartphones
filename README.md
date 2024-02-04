@@ -1,7 +1,15 @@
-# Angular Application on SmartPhones
+# Angular Application v2
 
-Angular App based on the theme "Smartphones" developed as part of Assignment #1 for the course WEB601[JavaScript 5].
+Angular App based on the theme "Smartphones" developed as part of Assignment #2 for the course WEB601[JavaScript 5].
 
+##Changes Made
+1. Content-list.ts file removed from the directory src/app/helper-files
+
+2. New component Content-list generated
+
+3. Object array of type Content created and added 6 items
+
+4. Content-list.component.html modified to iterate over array and dislay contents as cards with styling as per Assignment#2 instrucions.
 
 ## Getting Started
 

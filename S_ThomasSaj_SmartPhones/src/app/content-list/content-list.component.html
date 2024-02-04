@@ -1,0 +1,12 @@
+
+<div>
+    <div class="row mt-4 p-3">
+      <div *ngFor="let content of getContentArray() | slice:0:5; let i = index;" 
+      [innerHtml]="getHtmlOutput(i)" 
+      class="col-12 col-md-4" 
+      (click)="handleClick(content.id, content.title)">
+       
+      </div>
+    </div>
+  </div>
+ 

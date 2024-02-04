@@ -1,3 +1,9 @@
+.navbar{
+        //-webkit-box-shadow: 5px 5px 5px rgb(44, 44, 44);
+        //-moz-box-shadow:    10px 10px 10px rgb(44, 44, 44);
+        box-shadow:         -2px 3px 8px rgb(44, 44, 44);
+        z-index:999;
+}
 footer{
     height: 50px;
 }
