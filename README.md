@@ -2,7 +2,7 @@
 
 Angular App based on the theme "Smartphones" developed as part of Assignment #2 for the course WEB601[JavaScript 5].
 
-##Changes/Additions
+## Changes/Additions
 1. Content-list.ts file removed from the directory src/app/helper-files
 
 2. New component Content-list generated
@@ -23,7 +23,7 @@ git clone https://github.com/ShobhinSaj/S_ThomasSaj_WEB601Assignments_Smartphone
 
 3. Application will Build and output will be displayed in browser window
 
-##Author
+## Author
 
 Shobhin Thomas Saj
 
