@@ -1,15 +1,13 @@
-# Angular Application v2
+# Angular Application v3
 
 Angular App based on the theme "Smartphones" developed as part of Assignment #2 for the course WEB601[JavaScript 5].
 
-##Changes Made
-1. Content-list.ts file removed from the directory src/app/helper-files
+## Changes/Additions
+1. new pipe "content-type-filter" generated to filter out contents based on type value.
 
-2. New component Content-list generated
+2. content-list.component.html modified to display contents separately with different background colors based on type value implementing content-type-filter pipe and 
 
-3. Object array of type Content created and added 6 items
-
-4. Content-list.component.html modified to iterate over array and dislay contents as cards with styling as per Assignment#2 instrucions.
+3. Search bar added to search for content title along with added functionality where in card wth content title searched for gets a box shadow for highlighting.
 
 ## Getting Started
 
@@ -23,7 +21,7 @@ git clone https://github.com/ShobhinSaj/S_ThomasSaj_WEB601Assignments_Smartphone
 
 3. Application will Build and output will be displayed in browser window
 
-##Author
+## Author
 
 Shobhin Thomas Saj
 
