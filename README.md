@@ -9,7 +9,7 @@ Angular App based on the theme "Smartphones" developed as part of Assignment #2 
 
 3. Object array of type Content created and added 6 items
 
-4. Content-list.component.html modified to iterate over array and dislay contents as cards with styling as per Assignment#2 instrucions.
+4. Content-list.component.html modified to iterate over the array and display contents as cards with styling as per Assignment#2 instructions.
 
 ## Getting Started
 
@@ -19,9 +19,9 @@ Follow these steps to set up and run the app locally:
 ```
 git clone https://github.com/ShobhinSaj/S_ThomasSaj_WEB601Assignments_Smartphones.git
 ```
-2. Open terminal in VS Code and enter command "npm start"/"ng serve"
+2. Open the terminal in VS Code and enter the command "npm start"/"ng serve"
 
-3. Application will Build and output will be displayed in browser window
+3. Application will Build and the output will be displayed in the browser window
 
 ## Author
 
