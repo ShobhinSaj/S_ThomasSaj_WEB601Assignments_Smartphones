@@ -1,10 +1,22 @@
 
-
-  <div>
-    <div class="row mt-4 p-3">
-      <!-- <div *ngFor="let content of contentList.content; let i = index" class="col-12 col-md-4">
-        <div [innerHTML]="contentList.getHtmlOutput(i)"></div>
-      </div> -->
-    </div>
+<div
+  class="{{ isFirst ? 'card border-2 border-black' : 'card border-1 border-success' }}"
+  [id]="modTitle(content.title)"  [ngClass]="{
+    'text-danger': content.type === '',
+    'text-success': content.type === 'android',
+    'text-info':  content.type === 'ios'
+  }">
+  <div class="card-body">
+    <h5 class="card-text fw-bold text-center">{{ content.title }}</h5>
+    <p class="card-text">Description: {{ content.description }}</p>
+    <p class="card-text">Creator: {{ content.creator }}</p>
+    <ng-container *ngIf="content.imgURL; else noImage">
+      <img [src]="content.imgURL" class="card-img-top" alt="{{ content.title }}">
+    </ng-container>
+    <ng-template #noImage>
+      <img src="https://sthomassaj.scweb.ca/angularapp_assets/no_img.svg" class="card-img-top" alt="no_img">
+    </ng-template>
+    <div *ngIf="content.type"  class="card-text" appHoverAffect [affectStyle]="'underline'">Type: {{ content.type }}</div>
+    Tags:<div *ngFor="let tag of content.tags" class="card-text d-inline" appHoverAffect [affectStyle]="'bold'">{{ '\t'+tag }}</div>
   </div>
-  
+</div>

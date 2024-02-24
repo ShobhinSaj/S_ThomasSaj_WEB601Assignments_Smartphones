@@ -4,7 +4,6 @@ import { RouterOutlet } from '@angular/router';
 import {ContentListComponent} from './content-list/content-list.component'
 
 
-
 @Component({
   selector: 'app-root',
   standalone: true,

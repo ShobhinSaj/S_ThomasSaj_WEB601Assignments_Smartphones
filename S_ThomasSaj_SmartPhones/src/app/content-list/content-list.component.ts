@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { SlicePipe } from '@angular/common';
 import { ContentTypeFilterPipe } from './../pipes/content-type-filter/content-type-filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { ContentCardComponent } from './../content-card/content-card.component'
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, SlicePipe, ContentTypeFilterPipe, FormsModule],
+  imports: [CommonModule, SlicePipe, ContentTypeFilterPipe, FormsModule,ContentCardComponent],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
@@ -57,7 +58,8 @@ export class ContentListComponent {
       title: 'Xiaomi Mi 12',
       description: 'Innovative features and sleek design make the Mi 12 an exceptional choice.',
       creator: 'Xiaomi',
-      imgURL: 'https://sthomassaj.scweb.ca/angularapp_assets/mi10pro.jpg',
+      //imgURL: 'https://sthomassaj.scweb.ca/angularapp_assets/mi10pro.jpg',
+      imgURL:'',
       type: 'android',
       tags: ['Xiaomi', 'mi12']
     },
@@ -80,8 +82,6 @@ export class ContentListComponent {
       tags: ['Apple', 'iphone14', 'iphone14pro']
     }
   ]
-  //isFirst: boolean = true;
-
   searchTitle: string = '';
   searchResult = { exists: false, message: '' };
   constructor(private el: ElementRef, private renderer: Renderer2) { }

@@ -1,27 +1,25 @@
-# SThomasSajSmartPhones
+# Angular Application v4
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+Angular App based on the theme "Smartphones" developed as part of Assignment #2 for the course WEB601[JavaScript 5].
 
-## Development server
+## Changes/Additions
+1. Content-Card component modified to handle cards display instead of having Content-list component display cards.
+2. Content-Card component html modified to display default image in case image is not set for content-card.
+3. New Attribute directive "HoverAffect" created to manipulate styling dynamically in response to mouse events such as mouseenter,mouseleave etc. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+Follow these steps to set up and run the app locally:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clone the Repository in Visual Studio Code:**
+```
+git clone https://github.com/ShobhinSaj/S_ThomasSaj_WEB601Assignments_Smartphones.git
+```
+2. Open terminal in VS Code and enter command "npm start"/"ng serve"
 
-## Build
+3. Application will Build and output will be displayed in browser window
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Author
 
-## Running unit tests
+Shobhin Thomas Saj
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
