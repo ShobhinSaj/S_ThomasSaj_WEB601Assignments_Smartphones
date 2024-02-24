@@ -1,13 +1,11 @@
-# Angular Application v3
+# Angular Application v4
 
 Angular App based on the theme "Smartphones" developed as part of Assignment #2 for the course WEB601[JavaScript 5].
 
 ## Changes/Additions
-1. new pipe "content-type-filter" generated to filter out contents based on type value.
-
-2. content-list.component.html modified to display contents separately with different background colors based on type value implementing content-type-filter pipe and 
-
-3. Search bar added to search for content title along with added functionality where in card wth content title searched for gets a box shadow for highlighting.
+1. Content-Card component modified to handle cards display instead of having Content-list component display cards.
+2. Content-Card component html modified to display default image in case image is not set for content-card.
+3. New Attribute directive "HoverAffect" created to manipulate styling dynamically in response to mouse events such as mouseenter,mouseleave etc. 
 
 ## Getting Started
 
