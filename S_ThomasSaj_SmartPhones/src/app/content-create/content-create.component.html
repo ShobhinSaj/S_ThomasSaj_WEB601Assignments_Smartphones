@@ -1,0 +1,45 @@
+
+    <div class="bg-dark-subtle p-4 rounded-3 ">
+      <h4>Add New Device</h4>
+      
+
+      <form class="p-3" (submit)="addNewDev()">
+        <div class="mb-3">
+          <label for="id" class="form-label fw-bold ">ID:</label>
+          <input class="form-control w-25" type="number" id="id" min="0" name="id" [(ngModel)]="newDev.id" >
+          </div>
+         
+        <div class="mb-3">
+          <label for="title" class="form-label fw-bold ">Title:</label>
+          <input  type="text" name="title" class="form-control w-50" id="title" [(ngModel)]="newDev.title">
+          
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-bold " for="desc">Description:</label>
+          <textarea class="form-control w-50" name="description" id="desc" cols="30" rows="4" [(ngModel)]="newDev.description"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="creator" class="form-label fw-bold ">Creator:</label>
+            <input  type="text" name="creator" class="form-control w-50" id="creator" [(ngModel)]="newDev.creator">
+            
+          </div>
+          <div class="mb-3">
+            <label for="type" class="form-label fw-bold ">Type[ios/android]:</label>
+            <input  type="text" name="type" class="form-control w-50" id="type" [(ngModel)]="newDev.type">
+        </div>
+        <div>
+            <label class="form-label fw-bold " for="img">Image Url:</label>
+            <input class="form-control w-50" type="text" id="img" name="img" [(ngModel)]="newDev.imgURL">
+          </div>
+          <div>
+            <label class="form-label fw-bold " for="tags">Tags:</label>
+            <input class="form-control w-50" type="text" id="tags" name="tags" [(ngModel)]="newDev.tags">
+          </div>
+        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+      </form>
+      <div class="errMsg" *ngIf="errMsg != ''">
+        <p>{{errMsg}}</p>
+      </div>
+    </div>
+
+

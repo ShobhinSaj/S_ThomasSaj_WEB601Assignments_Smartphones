@@ -4,12 +4,12 @@ import { CommonModule } from '@angular/common';
 import { SlicePipe } from '@angular/common';
 import { ContentTypeFilterPipe } from './../pipes/content-type-filter/content-type-filter.pipe';
 import { FormsModule } from '@angular/forms';
-import { ContentCardComponent } from './../content-card/content-card.component'
-
+import { ContentCardComponent } from './../content-card/content-card.component';
+import { ContentCreateComponent } from './../content-create/content-create.component';
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, SlicePipe, ContentTypeFilterPipe, FormsModule,ContentCardComponent],
+  imports: [CommonModule, SlicePipe, ContentTypeFilterPipe, FormsModule,ContentCardComponent,ContentCreateComponent],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
@@ -84,6 +84,7 @@ export class ContentListComponent {
   ]
   searchTitle: string = '';
   searchResult = { exists: false, message: '' };
+  showIdExistsWarning: boolean = false;
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
   getContentArray(): Content[] {
@@ -157,4 +158,20 @@ export class ContentListComponent {
     }
   }
 
+  addNewDev(newDev: Content) {
+    const idExists = this.contentArray.some(content => content.id === newDev.id);
+    if (idExists) {
+      
+      this.showIdExistsWarning = true;
+      alert("Id " + newDev.id + "  already exists!");  
+    } else {
+      // Reset the warning
+      this.showIdExistsWarning = false;
+      this.contentArray.push(newDev);
+      console.log(this.contentArray);
+      this.contentArray = [...this.contentArray];
+     
+   
+  }
+}
 }

@@ -1,11 +1,12 @@
-# Angular Application v4
+# Angular Application v5
 
 Angular App based on the theme "Smartphones" developed as part of Assignment #2 for the course WEB601[JavaScript 5].
 
 ## Changes/Additions
-1. Content-Card component modified to handle cards display instead of having Content-list component display cards.
-2. Content-Card component html modified to display default image in case image is not set for content-card.
-3. New Attribute directive "HoverAffect" created to manipulate styling dynamically in response to mouse events such as mouseenter,mouseleave etc. 
+1. New component Create-Content added to enable adding new devices to the array.
+2. Create-Content component html modified to have a form to enter the new device information.
+3. Create-Content component ts file modified to validate the new device obnject and emit the same to be received at Content-list component.
+4. addNewDev() method added to Content-list component ts to receive the new device objct emitted by Create-Content component and add it to contentArray[Array of devices]
 
 ## Getting Started
 

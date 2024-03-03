@@ -8,7 +8,7 @@
         {{ searchResult.message }}
       </p>
     </div>
-
+    <app-content-create (addDeviceEvent)="addNewDev($event)"></app-content-create>
     <!-- No type set -->
     <div class="row mt-4 p-3 bg-info-subtle ">
       <app-content-card *ngFor="let content of getContentArray() | contentTypeFilter:''; let i = index;let isFirst=first" 
