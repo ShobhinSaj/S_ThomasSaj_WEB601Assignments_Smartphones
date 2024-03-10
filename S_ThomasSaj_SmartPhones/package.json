@@ -8,7 +8,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:S_ThomasSaj_SmartPhones": "node dist/s-thomas-saj-smart-phones/server/server.mjs",
-    
     "generatecomponent": "ng generate component",
     "generatepipe": "ng generate pipe",
     "generatedirective": "ng generate directive"
@@ -25,6 +24,7 @@
     "@angular/platform-server": "^17.1.0",
     "@angular/router": "^17.1.0",
     "@angular/ssr": "^17.1.1",
+    "angular-in-memory-web-api": "^0.17.0",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

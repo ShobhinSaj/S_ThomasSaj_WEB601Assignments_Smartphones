@@ -4,7 +4,8 @@
   [id]="modTitle(content.title)"  [ngClass]="{
     'text-danger': content.type === '',
     'text-success': content.type === 'android',
-    'text-info':  content.type === 'ios'
+    'text-info':  content.type === 'ios',
+    'shadow':isSingleContentItem=== true
   }">
   <div class="card-body">
     <h5 class="card-text fw-bold text-center">{{ content.title }}</h5>

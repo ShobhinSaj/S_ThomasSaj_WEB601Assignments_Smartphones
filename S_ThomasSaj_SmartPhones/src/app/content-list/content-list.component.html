@@ -9,22 +9,28 @@
       </p>
     </div>
 
+    <h4 class="text-center">Top Picks of the Day!</h4>
+    <!-- Single Content Card of id=1 -->
+    <div class="row mt-4 p-3 bg-light-subtle  ">
+      <app-content-card   [content]="singleContentItem"  [isSingleContentItem]="isSingleContentItem(singleContentItem.id)" class="col-12 col-md-4 mb-3" *ngIf="singleContentItem" (click)="handleClick(singleContentItem.id, singleContentItem.title)"></app-content-card>
+    </div>
+    
     <!-- No type set -->
     <div class="row mt-4 p-3 bg-info-subtle ">
-      <app-content-card *ngFor="let content of getContentArray() | contentTypeFilter:''; let i = index;let isFirst=first" 
+      <app-content-card *ngFor="let content of contentArray | contentTypeFilter:''; let i = index;let isFirst=first" 
       [content]="content" [isFirst]="isFirst"  class="col-12 col-md-4 mb-3" (click)="handleClick(content.id, content.title)"></app-content-card>
     </div>
-   
+    <h4 class="text-center mt-4 ">Best Selling Android</h4>
     <!-- type set to android-->
     <div class="row mt-4 p-3 bg-dark-subtle ">
-      <app-content-card *ngFor="let content of getContentArray() | contentTypeFilter:'android'; let i = index;let isFirst=first" 
+      <app-content-card *ngFor="let content of contentArray | contentTypeFilter:'android'; let i = index;let isFirst=first" 
       [content]="content" [isFirst]="isFirst"  class="col-12 col-md-4 mb-3 text-success " (click)="handleClick(content.id, content.title)" ></app-content-card>
     </div>
     
-
+    <h4 class="text-center mt-4 ">Best Selling IOS</h4>
     <!-- type set to ios-->
     <div class="row mt-4 p-3 bg-success-subtle ">
-      <app-content-card *ngFor="let content of getContentArray() | contentTypeFilter:'ios'; let i = index;let isFirst=first" 
+      <app-content-card *ngFor="let content of contentArray | contentTypeFilter:'ios'; let i = index;let isFirst=first" 
       [content]="content" [isFirst]="isFirst"  class="col-12 col-md-4 mb-3" (click)="handleClick(content.id, content.title)"></app-content-card>
     </div>
   </div>

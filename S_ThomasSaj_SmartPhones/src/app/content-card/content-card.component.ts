@@ -13,6 +13,7 @@ import { HoverAffectDirective } from '../directives/hover-affect.directive';
 export class ContentCardComponent {
   @Input() content:any;
   @Input() isFirst: boolean=false;
+  @Input() isSingleContentItem: boolean | undefined;
   modTitle(title: string): string {
     return title.replace(/\s/g, '');
   }

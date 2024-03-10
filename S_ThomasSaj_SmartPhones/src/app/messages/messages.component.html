@@ -1,0 +1,11 @@
+    <div class="container border border-2 rounded-3  border-black bg-success-subtle bg-opacity-25 mb-3" *ngIf="messageService.messages.length">
+      <h2 class="text-black text-center">Messages</h2>
+      <ul>
+        <li class="list-unstyled fs-5 text-center" *ngFor="let message of messageService.messages">
+          {{message}}
+        </li>
+      </ul>
+        <div class="text-center">
+        <button class="btn btn-danger"  (click)="messageService.clear()">Clear</button>
+        </div>
+    </div>
