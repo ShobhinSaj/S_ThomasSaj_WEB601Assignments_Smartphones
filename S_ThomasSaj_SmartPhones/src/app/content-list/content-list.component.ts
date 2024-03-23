@@ -6,12 +6,13 @@ import { ContentTypeFilterPipe } from './../pipes/content-type-filter/content-ty
 import { FormsModule } from '@angular/forms';
 import { ContentCardComponent } from './../content-card/content-card.component'
 import { SmartPhoneService } from '../services/smartphoneservice.service';
-
+import {ModifyContentComponent } from './..//modify-content/modify-content.component';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, SlicePipe, ContentTypeFilterPipe, FormsModule,ContentCardComponent],
+  imports: [CommonModule, SlicePipe, ContentTypeFilterPipe, FormsModule,ContentCardComponent,ModifyContentComponent],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
@@ -23,7 +24,7 @@ export class ContentListComponent {
   searchResult = { exists: false, message: '' };
   contentArray: Content[]=[];
   singleContentItem: Content | undefined;
-  constructor(private el: ElementRef, private renderer: Renderer2,private contentService: SmartPhoneService) { }
+  constructor(private el: ElementRef, private renderer: Renderer2,private contentService: SmartPhoneService,private messageService: MessageService) { }
   ngOnInit(){
     this.contentService.getContent().subscribe(contentArray  => this.contentArray = contentArray);
     this.contentService.getContentById(1).subscribe(contentItem => this.singleContentItem = contentItem);
@@ -101,5 +102,25 @@ export class ContentListComponent {
   isSingleContentItem(contentId: number): boolean {
     return !!this.singleContentItem && this.singleContentItem.id === contentId;
   }
+  addNewContent(newContent:any){
+    newContent.tags = newContent.tags.split(',').map((tag: string) => tag.trim());
+    newContent.type=newContent.type.toLowerCase();
+    this.contentArray.push(newContent);
+    this.contentArray = [...this.contentArray];
+   
+    this.messageService.add(`New Device added succesfully: ${newContent.title}`);
+  }
 
+  // addContentToList(newContentItem: Content) : void {
+  //   console.log(`Content added succesfully: ${newContentItem.title}`);
+  //   console.log(newContentItem);
+
+  //   }
+
+  updateContentInList(contentItem: Content): void {
+      this.contentService.updateContent(contentItem)
+      .subscribe(() =>
+      console.log("Content updated successfully")
+    );
+    }
 }

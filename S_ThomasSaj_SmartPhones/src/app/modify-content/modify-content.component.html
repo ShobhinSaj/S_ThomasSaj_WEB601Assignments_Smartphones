@@ -1,0 +1,37 @@
+
+
+<div class="bg-dark-subtle p-4 rounded-3 ">
+    <h4>Add Device</h4>
+    
+
+    
+      <div class="mb-3">
+        <label for="title" class="form-label fw-bold ">Title:</label>
+        <input  type="text" name="title" class="form-control w-50" id="title" [(ngModel)]="newContentItem.title">
+        
+      </div>
+      <div class="mb-3">
+        <label class="form-label fw-bold " for="desc">Description:</label>
+        <textarea class="form-control w-50" name="description" id="desc" cols="30" rows="4" [(ngModel)]="newContentItem.description"></textarea>
+      </div>
+      <div class="mb-3">
+          <label for="creator" class="form-label fw-bold ">Creator:</label>
+          <input  type="text" name="creator" class="form-control w-50" id="creator" [(ngModel)]="newContentItem.creator">
+          
+        </div>
+        <div class="mb-3">
+          <label for="type" class="form-label fw-bold ">Type[ios/android]:</label>
+          <input  type="text" name="type" class="form-control w-50" id="type" [(ngModel)]="newContentItem.type">
+      </div>
+      <div>
+          <label class="form-label fw-bold " for="img">Image Url:</label>
+          <input class="form-control w-50" type="text" id="img" name="img" [(ngModel)]="newContentItem.imgURL">
+        </div>
+        <div>
+          <label class="form-label fw-bold " for="tags">Tags:</label>
+          <input class="form-control w-50" type="text" id="tags" name="tags" [(ngModel)]="newContentItem.tags">
+        </div>
+      <button type="submit" class="btn btn-primary mt-2" (click)="addContent()">Submit</button>
+    
+    
+  </div>
