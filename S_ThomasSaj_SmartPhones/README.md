@@ -1,13 +1,13 @@
-# Angular Application v6
+# Angular Application v7
 
 Angular App based on the theme "Smartphones" developed as part of Assignment #6 for the course WEB601[JavaScript 5].
 
 ## Changes/Additions
-1. New item contentDb added to helper files directory to store the array of content.
-2. content-list.component.ts and content-list.component.html modified to get content array from contentDb.
-3. New service "SmartPhoneService" created under services folder to retrieve the content array from the contentDb file and return it using the obserable pattern.
-4. New component called MessageComponent and service "MessageService" added to display relevant messages when content is retrieved from contentDb.
-5. app.config.ts modified to inject new services created.
+1. In-memory-data service modified to use htt  In-memory Web API to simulate a data server.
+2. contentDb removed from src/app/helper-files
+3. New component Modify-content added to enable adding new devices to the list using http POST request.
+4. SmartPhoneService modified to retrieve data from the simulated data server.
+
 
 ## Getting Started
 
