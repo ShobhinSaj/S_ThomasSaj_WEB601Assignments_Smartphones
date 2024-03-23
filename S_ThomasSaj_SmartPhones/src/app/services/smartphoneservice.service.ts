@@ -33,7 +33,7 @@ export class SmartPhoneService {
       addContent(newContentItem: Content): Observable<Content>{
         return this.http.post<Content>(this.apiUrl, newContentItem, this.httpOptions)
       .pipe(tap(() => {
-          this.messageService.add('Content added successfully');
+          this.messageService.add(`New Device added succesfully: ${newContentItem.title}`);
         })
       );
     }

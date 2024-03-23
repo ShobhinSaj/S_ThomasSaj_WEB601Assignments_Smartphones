@@ -107,8 +107,6 @@ export class ContentListComponent {
     newContent.type=newContent.type.toLowerCase();
     this.contentArray.push(newContent);
     this.contentArray = [...this.contentArray];
-   
-    this.messageService.add(`New Device added succesfully: ${newContent.title}`);
   }
 
   // addContentToList(newContentItem: Content) : void {
